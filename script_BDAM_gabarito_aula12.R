@@ -404,14 +404,15 @@ dados_bd3$POPH = dados_bd3$HABILITADOS_GERAL_2025
 dados_bd3$POPHF = dados_bd3$POP_FEM_HABILITADA_2020
 dados_bd3$POPHM = dados_bd3$POP_MASC_HABILITADA_2020
 
-View(dados_bd3)
-
 BANCO3_RJ = dados_bd3[, c("ANO", "NIVEL", "CODIGO","POPH", "POPHF", "POPHM")]
 
+View(dados_bd3)
 
 # Tarefa 4: Exportar o banco de dados BANCO3_RJ com o nome BANCO3_RJ.csv
 
 # Ao terminar a Tarefa 4 commit com a mensagem "dados e script - Etapa 3" e envie para o repositório Treino_Extensao
+
+write.csv2(BANCO3_RJ, "BANCO_RJ.csv", row.names=FALSE)
 
 
 ##### ETAPA 4 - banco 4 - equivalente ao ATLAS ######
