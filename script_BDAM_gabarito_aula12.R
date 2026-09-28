@@ -362,6 +362,12 @@ write.csv(BANCO2_RJ, "BANCO2_RJ.csv",  row.names = FALSE)
 
 # Ao terminar a Tarefa 1 commit com a mensagem " script - tarefa 1" e envie para o repositório Treino_Extensao
 
+dados_bd3 = read.csv("banco 3 = SIDRA.csv", header = TRUE, sep=";")
+
+str(dados_bd3)
+summary(dados_bd3)
+View(dados_bd3)
+
 
 # Tarefa 2: Manipulação dos dados
 # Criar a variável MUNICIPIOS = MUNICIPIO em dados_bd3, sendo que agora com 6 dígitos (em vez de 7 dígitos), desprezando o último dígito verificador
