@@ -390,6 +390,24 @@ View(dados_bd3)
 
 # Ao terminar a Tarefa 3 commit com a mensagem " script - tarefa 1 a 3" e envie para o repositório Treino_Extensao
 
+dados_bd3$ANO = 2025
+
+dados_bd3$NIVEL = ifelse(dados_bd3$MUNICIPIO == 33, "UF", "MUNICIPIO")
+
+
+dados_bd3$CODIGO = ifelse(dados_bd3$NIVEL == "UF",
+                          dados_bd3$MUNICIPIO,
+                          dados_bd3$MUNICIPIOS)
+
+
+dados_bd3$POPH = dados_bd3$HABILITADOS_GERAL_2025
+dados_bd3$POPHF = dados_bd3$POP_FEM_HABILITADA_2020
+dados_bd3$POPHM = dados_bd3$POP_MASC_HABILITADA_2020
+
+View(dados_bd3)
+
+BANCO3_RJ = dados_bd3[, c("ANO", "NIVEL", "CODIGO","POPH", "POPHF", "POPHM")]
+
 
 # Tarefa 4: Exportar o banco de dados BANCO3_RJ com o nome BANCO3_RJ.csv
 
