@@ -425,7 +425,7 @@ write.csv2(BANCO3_RJ, "BANCO_RJ.csv", row.names=FALSE)
 
 # Ao terminar a Tarefa 1 commit com a mensagem " script - tarefa 1" e envie para o repositório Treino_Extensao
 
-dados_bd4 = read.csv("banco 4 = ATLAS.csv", header = TRUE, sep = ";")
+dados_bd4 = read.csv("banco 4 = ATLAS.csv", header = TRUE, sep = ";", fileEncoding = "latin1")
 codigos_municipios = read.csv("códigos dos municípios - 2010.csv", header = TRUE, sep = ";")
 str(dados_bd4)
 summary(dados_bd4)
@@ -441,6 +441,18 @@ summary(codigos_municipios)
 # coerente com os nomes dos municipios e códigos IBGE
 
 # Ao terminar a Tarefa 2 commit com a mensagem " script - tarefa 1 a 2" e envie para o repositório Treino_Extensao
+
+nome_municipio = sub(" \\(RJ\\)$", "", dados_bd4$MUNICIPIO)
+nome_municipio
+
+dados_bd4$MUNICIPIOS = codigos_municipios$CODMUNRES[
+  match(nome_municipio, codigos_municipios$município)
+]
+
+dados_bd4$MUNICIPIOS[1] = 33
+
+dados_bd4[, c("MUNICIPIO", "MUNICIPIOS")]
+
 
 
 # Tarefa 3: Criar o banco de dados BANCO4_RJ, POR MUNICÍPIO, com as seguintes variáveis listadas abaixo. 
