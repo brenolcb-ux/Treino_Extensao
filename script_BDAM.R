@@ -425,6 +425,15 @@ write.csv2(BANCO3_RJ, "BANCO_RJ.csv", row.names=FALSE)
 
 # Ao terminar a Tarefa 1 commit com a mensagem " script - tarefa 1" e envie para o repositório Treino_Extensao
 
+dados_bd4 = read.csv("banco 4 = ATLAS.csv", header = TRUE, sep = ";")
+codigos_municipios = read.csv("códigos dos municípios - 2010.csv", header = TRUE, sep = ";")
+str(dados_bd4)
+summary(dados_bd4)
+View(dados_bd4)
+
+str(codigos_municipios)
+summary(codigos_municipios)
+View(codigos_municipios)
 
 # Tarefa 2: Manipulação dos dados
 # Criar uma nova variável em dados_bd4 MUNICIPIOS atribuindo os códigos dos municípios, de forma a ficar
