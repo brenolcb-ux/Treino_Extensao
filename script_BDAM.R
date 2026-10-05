@@ -505,6 +505,8 @@ dim(BANCO4_RJ)
 # Ao terminar a Tarefa 4 commit com a mensagem "dados e script - Etapa 4" e envie para o repositório Treino_Extensao
 
 
+write.csv(BANCO4_RJ, "BANCO4_RJ.csv", row.names = FALSE)
+
 
 ##### ETAPA 5 - banco 5 - equivalente ao SINISA ######
 ##### Você deve criar e estar na branch banco-5 antes de inserir os comandos #####
